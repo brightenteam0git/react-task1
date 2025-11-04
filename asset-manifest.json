@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-task1/static/css/main.040f3932.css",
-    "main.js": "/react-task1/static/js/main.aa72ab20.js",
+    "main.js": "/react-task1/static/js/main.1a0615aa.js",
     "static/js/453.ac1925be.chunk.js": "/react-task1/static/js/453.ac1925be.chunk.js",
     "static/media/pet-food.jpg": "/react-task1/static/media/pet-food.5b20bb1fc1bbcd48a36a.jpg",
     "static/media/vet-cat.jpg": "/react-task1/static/media/vet-cat.2aa1229ece629133b2dd.jpg",
@@ -47,11 +47,11 @@
     "static/media/responsible.png": "/react-task1/static/media/responsible.5dc7cf5626138e6512c9.png",
     "index.html": "/react-task1/index.html",
     "main.040f3932.css.map": "/react-task1/static/css/main.040f3932.css.map",
-    "main.aa72ab20.js.map": "/react-task1/static/js/main.aa72ab20.js.map",
+    "main.1a0615aa.js.map": "/react-task1/static/js/main.1a0615aa.js.map",
     "453.ac1925be.chunk.js.map": "/react-task1/static/js/453.ac1925be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.040f3932.css",
-    "static/js/main.aa72ab20.js"
+    "static/js/main.1a0615aa.js"
   ]
 }
