@@ -1,0 +1,508 @@
+/* ===== Base Layout ===== */
+.dogPage {
+  display: flex;
+  min-height: calc(100vh - 200px); /* Adjust if Navbar/Footer height differs */
+  background: #d2d3d4;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 470px;
+  background: rgb(211, 211, 211);
+  border-right: 1px solid #ddd;
+  padding: 1.5rem 1rem;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  margin: 0rem 0 0.5rem;
+  font-size: 28px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-align: center;
+}
+
+.sidebar h3:hover {
+  color: #ffffff !important;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 0 0 0.5rem;
+  margin: 0 0 3rem;
+  font-size:20px;
+  font-style:bold;
+}
+
+.sidebar li {
+  padding: 0.4rem 0.5rem;
+  margin: 1.9rem 0;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #000000;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-weight: 700;
+  font-size:24px;
+  letter-spacing: 1px;
+}
+
+.sidebar li:hover {
+  background: #ffffff1b;
+}
+
+.active {
+  background:#fdc866;
+  color: #000000 !important;
+  font-weight: 600;
+  border-radius:0;
+  padding:20px;
+}
+
+.sectionIcon {
+  display: block;
+  width: 100px;        /* adjust as needed */
+  height: auto;
+  margin: 0 auto 0rem; 
+  color:Black !important;
+   /* center and add spacing below */
+}
+/* ===== Main Content ===== */
+.dogMain {
+  flex: 1;
+  padding: 2rem 4rem;
+  background-color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+  text-align: center; /* Center everything inside */
+}
+
+/* Paw Icon Wrapper */
+.paw-icon-container {
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;
+  gap: 10px; /* spacing between multiple paw icons */
+  margin-bottom: 1rem;
+}
+
+/* Paw Icon */
+.paw-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  animation: paw-bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes paw-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.dogMain h1 {
+  font-size: 4.9rem;            /* balanced large size */
+  font-weight: 800;
+  color: #000000;               /* same orange tone */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top:0px;
+  line-height: 1.2;
+}
+
+/* Subtitle paragraph */
+.dogMain p {
+  color: #555;
+  font-size: 1.4rem;
+  max-width: 900px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  text-align: center;
+   margin: 0 auto 3rem;
+   margin-bottom:40px;
+}
+
+
+/* ===== Product Grid ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+}
+
+.productCard {
+  background: #f5f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 3rem;
+  width:500px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.productCard img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.productCard h2 {
+  font-size: 1.8rem;
+  margin: 0.4rem 0;
+  color: #f8b538;
+}
+
+.productCard p {
+  font-size: 1.4rem;
+  font-style: bold;
+  color: #000000;
+}
+
+.divider {
+  width: 60px;           /* short centered line */
+  margin: 0.6rem auto;   /* vertical spacing & center */
+  border: none;
+  border-top: 1px solid #b86a4c;
+}
+
+.subdesc {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+
+  
+ 
+
+/* ===== DESKTOP SIDEBAR (Show All Categories) ===== */
+.desktopSidebar {
+  display: none; /* Hide on mobile */
+}
+
+/* === Only visible on desktop === */
+@media (min-width: 1025px) {
+  .desktopSidebar {
+    display: block;
+  }
+
+  /* Hide mobile view elements */
+  .mobileTopBar,
+  .mobileSubMenu {
+    display: none !important;
+  }
+
+  .categoryBlock {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .categoryBlock h3 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background: #acacac;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  .categoryBlock ul {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+
+  .categoryBlock li {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0.4rem 0;
+    color: #333;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .categoryBlock li:hover {
+    background: #ffffff;
+    color: #000;
+  }
+
+  .active {
+    background: #f9d36a;
+    color: #000 !important;
+    font-weight: 600;
+  }
+}
+
+
+/* ===== FULL RESPONSIVE DESIGN ===== */
+
+/* For tablets and small laptops */
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .productCard {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .dogMain {
+    padding: 1.5rem 2rem;
+  }
+
+  .dogMain h1 {
+    font-size: 3.2rem;
+  }
+
+  .dogMain p {
+    font-size: 1.2rem;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* ✅ Show 2 product cards per row */
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .productCard {
+    width: 100%;
+    max-width: 250px; /* ✅ Smaller size for mobile fit */
+    padding: 1rem;
+  }
+
+  .productCard img {
+    height: 200px; /* ✅ Resize image for smaller layout */
+    object-fit: cover;
+  }
+
+  .productCard h2 {
+    font-size: 1rem;
+  }
+
+  .productCard p {
+    font-size: 0.9rem;
+  }
+
+  .dogPage {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .dogMain {
+    padding: 1rem;
+    background-color: #e5e5e5;
+  }
+
+  .dogMain h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .dogMain p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .paw-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .productCard {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .productCard img {
+    height: 250px;
+  }
+
+  .productCard h2 {
+    font-size: 1.4rem;
+  }
+
+  .productCard p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+.sidebar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;              /* remove space between items */
+ 
+  margin: 0;
+}
+
+.sidebar li {
+  background: #fff;
+  border-radius: 0;     /* straight edges to touch each other */
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  list-style: none;
+  transition: all 0.2s ease;
+  text-align: center;
+  margin: 0;           /* remove any margin */
+}
+
+.sidebar li:hover {
+  background: #fdc866;
+  color: #000;
+}
+
+.sidebar .active {
+  background: #fdc866;
+  border-color: #000;
+  color: #000;
+  font-weight: 700;
+}
+
+  /* Top horizontal row */
+  .mobileTopBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #d3d3d3;
+    padding: 12px 0;
+    border-bottom: 2px solid #000;
+  }
+
+  .categoryTab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+    padding: 3px;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s ease;
+  }
+
+  .categoryTab p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+
+  .categoryTab:hover {
+    background: #fdc866;
+  }
+
+  .activeTab {
+    background: #fdc866;
+  }
+
+  .tabIcon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+  }
+
+  /* Subcategories dropdown below top row */
+  .mobileSubMenu {
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+    border-top: 1px solid #ccc;
+    padding: 10px 15px;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .mobileSubMenu li {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .mobileSubMenu li:hover {
+    background: #eaeaea;
+  }
+
+  .activeSub {
+    background: #fdc866;
+    color: #000;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Ensure main content adjusts below */
+  .dogPage {
+    flex-direction: column;
+  }
+
+}
+  
+
+
+/* For extra small devices (≤480px) */
+@media (max-width: 480px) {
+  .dogMain h1 {
+    font-size: 1.8rem;
+  }
+
+  .paw-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .productCard {
+    padding: 1rem;
+  }
+
+  .productCard img {
+    height: 200px;
+  }
+}
+
+

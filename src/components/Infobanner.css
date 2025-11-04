@@ -1,0 +1,145 @@
+/* InfoBanner.css */
+
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #f7ae02;
+  padding: 100px 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  gap: 20px;
+  height:auto;
+}
+
+.info-banner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #fefcf6;
+  padding: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  gap: 20px;
+  height:auto;
+  max-height:900px;
+  
+}
+
+.info-card {
+  flex: 1;           
+  min-width: 435px;  
+  max-width: 500px; 
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0cece;
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color:#fefcf6;
+  white-space:nowrap;
+}
+
+.info-card:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+  background-color: #052643;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.info-text h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.info-text p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 🔹 Responsive InfoBanner */
+
+/* Medium screens / tablets */
+@media (max-width: 1024px) {
+  .info-wrapper {
+    padding: 60px 50px;
+    gap: 15px;
+  }
+
+  .info-card {
+    min-width: 300px; /* allow smaller cards */
+    max-width: 100%;
+  }
+}
+
+/* Small screens / mobile (≤768px) */
+@media (max-width: 768px) {
+  .info-wrapper {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .info-banner {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .info-card {
+    min-width: 100%;  /* full width on mobile */
+    flex: 1 1 100%;
+    padding: 15px;
+    white-space: normal; /* allow text to wrap */
+    margin-bottom: 15px;
+  }
+
+  .info-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .info-text h4 {
+    font-size: 14px;
+  }
+
+  .info-text p {
+    font-size: 12px;
+  }
+}
+
+/* Extra small mobile (≤480px) */
+@media (max-width: 480px) {
+  .info-wrapper {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+
+  .info-card {
+    padding: 10px;
+  }
+
+  .info-icon {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .info-text h4 {
+    font-size: 13px;
+  }
+
+  .info-text p {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,736 @@
+/* =============================
+   PAGE 1 — CHECKOUT PAGE DESIGN
+============================= */
+
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+  background: url("../assets/contact-bg.jpg") center/cover no-repeat;
+}
+
+/* Container */
+.checkout-container {
+  display: flex;
+  background: #f3f3f3;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  width: 1700px;
+  max-width: 95%;
+  min-height: 700px;
+}
+
+/* Left banner image */
+.checkout-container::before {
+  content: "";
+  flex: 1;
+  background: url("../assets/contact-bg.jpg") center/cover no-repeat;
+  min-width: 50%;
+}
+
+/* Right-side form */
+.checkout-form-section {
+  flex: 1;
+  padding: 60px 70px;
+  background: #f3f3f3;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkout-container h1 {
+  font-size: 42px;
+  color: #000000;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Form */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  color: #000000;
+  margin-bottom: 8px;
+  font-size: 20px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  padding: 10px 5px;
+  background: transparent;
+  color: #000000;
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-bottom-color: #f8b538;
+  outline: none;
+}
+
+/* Discount */
+.discount-section {
+  margin-top: 10px;
+}
+
+.discount-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.discount-input input {
+  flex: 1;
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+}
+
+.apply-btn {
+  background-color: #f8b538;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #ffcf70;
+}
+
+/* Price Summary */
+.price-summary {
+  background: #e8e7e7;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 25px;
+  color: #000000;
+  font-size: 22px;
+}
+
+/* Place Order Button */
+.checkout-btn {
+  margin-top: 30px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: #f8b538;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #ffcf70;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+.success {
+  color: #2ecc71;
+  font-size: 14px;
+}
+
+
+
+/* ==============================
+   ORDER SUMMARY — CLEAN VERSION
+============================== */
+
+body, html {
+  background: #fff !important;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.summary-overlay h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.summary-overlay p {
+  font-size: 18px;
+  color: #f5f5f5;
+}
+
+/* Main Summary Card */
+/* Hide the checkout container after order is placed */
+.checkout.submitted .checkout-container {
+  display: none !important;
+}
+
+/* Center and style the summary */
+.order-summary {
+  background: #f5f5f5;
+  margin: 80px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 40px 50px;
+  min-width: 1000px;
+  color: #333;
+  animation: fadeIn 0.6s ease-in;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+
+/* Section Headings */
+.order-summary h2 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f8b538;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-left:20px;
+}
+
+.order-summary h3 {
+font-size: 30px;
+  color: #222 !important;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f8b538;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-left:20px;
+}
+
+/* Customer Info */
+.summary-info p {
+  font-size: 17px;
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Items List */
+.summary-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-items li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  font-size: 17px;
+}
+
+.summary-items li:last-child {
+  border: none;
+}
+
+/* Totals */
+.price-totals {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.price-totals p {
+  margin: 6px 0;
+  color:#000 !important;
+}
+
+.discount-line {
+  color: #d63031;
+}
+
+.final-total {
+  font-size: 26px;
+  font-weight: 700;
+  border-top: 2px solid #f8b538;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+/* Thank You Text */
+.thankyou {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000 !important;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Centered Thank You Header */
+.thankyou-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.thankyou-header h1 {
+  font-size: 49px;
+  font-weight: 700;
+  color: #222;
+}
+
+.thankyou-header p {
+  font-size: 20px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Two-column Layout */
+.summary-left .summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* spacing between each line */
+  
+}
+
+.summary-left .item-card {
+  display: flex;         /* keep flex */
+  flex-direction: column; /* stack children vertically */
+  align-items: flex-start; /* align to left */
+  gap: 8px;              /* space between lines */
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-left:20px;
+  min-width:400px;
+}
+
+.summary-left .info-item {
+  font-size: 23px;
+  color: #444;
+  line-height: 1.1;
+  margin-top:20px;
+}
+
+/* Right-side purchased items */
+.summary-right {
+  flex: 1.2;
+}
+
+.summary-right h3 {
+  color: #f8b538;
+  margin-bottom: 20px;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-height:250px;
+  max-width:400px;
+}
+
+.item-card img {
+  width: 200px;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  color: #000000 !important;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #000000 !important;
+  font-size:25px !important;
+  margin-bottom:10px;
+}
+
+.item-size {
+  color: #000000 !important;
+  margin-bottom:10px;
+  font-size: 23px !important;
+}
+
+.item-qty,
+.item-price {
+  font-size: 23px !important;
+  color: #000000 !important;
+  margin-bottom:10px;
+}
+
+.summary-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px; /* space between left and right */
+}
+
+.summary-left {
+  flex: 1; /* left summary width */
+}
+
+.summary-right {
+  flex: 1.2; /* right items width */
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Centered Total */
+.summary-total {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 2px solid #f8b538;
+  padding-top: 20px;
+}
+
+.summary-total h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ================================
+   ✅ RESPONSIVE DESIGN (NO DESKTOP CHANGE)
+================================ */
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .checkout-container {
+    flex-direction: column;
+    width: 95%;
+    min-height: auto;
+  }
+
+  .checkout-container::before {
+    display: none; /* hide background image panel */
+  }
+
+  .checkout-form-section {
+    padding: 40px 30px;
+  }
+
+  .checkout-container h1 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px;
+    padding: 8px 4px;
+  }
+
+  .price-summary {
+    font-size: 18px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* Order summary adjustments */
+  .order-summary {
+    min-width: auto;
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .summary-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .summary-left,
+  .summary-right {
+    width: 100%;
+  }
+
+  .item-card {
+    max-width: 100%;
+  }
+
+  .item-card img {
+    width: 160px;
+    height: 180px;
+  }
+
+  .item-name,
+  .item-size,
+  .item-qty,
+  .item-price {
+    font-size: 20px !important;
+  }
+  .order-summary {
+    flex-direction: column;
+    width: 95%;
+    padding: 40px 30px;
+    min-height: auto;
+    box-shadow: none;
+  }
+
+  .order-summary h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .order-details {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .order-left,
+  .order-right {
+    width: 100%;
+  }
+
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .item-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .item-card img {
+    width: 150px;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .item-name {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .item-desc,
+  .item-price {
+    font-size: 18px;
+  }
+
+  .summary-total {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .thankyou-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+
+
+/* Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  .checkout {
+    padding: 20px;
+    background-size: cover;
+  }
+
+  .checkout-container {
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .checkout-form-section {
+    padding: 25px 20px;
+  }
+
+  .checkout-container h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-size: 16px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .apply-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .price-summary {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .checkout-btn {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+  }
+
+   html, body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .order-summary {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+
+  .order-details,
+  .order-left,
+  .order-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: visible;
+  }
+
+    .order-summary h1,
+  .order-summary h2,
+  .order-summary h3 {
+    font-size: 18px;
+  }
+
+  .summary-info p,
+  .summary-items li,
+  .price-totals p,
+  .thankyou {
+    font-size: 14px;
+  }
+
+  .item-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    gap: 6px;
+    min-height: auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .item-card img {
+    width: 80px;
+    height: 90px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .item-name {
+    font-size: 14px !important;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .item-size,
+  .item-qty,
+  .item-price {
+    font-size: 12px !important;
+    color: #222 !important;
+    margin-bottom: 2px;
+  }
+
+   .price-totals {
+    text-align: center !important;
+    margin-top: 15px;
+  }
+
+  .price-totals p,
+  .final-total {
+    font-size: 14px !important;
+    text-align: center !important;
+    width: 100%;
+    display: block;
+  }
+
+  .final-total {
+    margin-top: 8px;
+    border-top: 2px solid #f8b538;
+    padding-top: 6px;
+    font-weight: 700;
+  }
+  .thankyou-header h1 {
+    font-size: 22px;
+  }
+
+  .thankyou-header p {
+    font-size: 14px;
+  }
+  /* prevent any container from forcing horizontal scroll */
+  * {
+    max-width: 100% !important;
+  }
+}
+

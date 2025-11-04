@@ -1,0 +1,214 @@
+/* ——— Your Original CSS (unchanged desktop) ——— */
+.journal-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 90px 20px;
+  font-family: "Georgia", serif;
+}
+
+.journal-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  font-weight: 500;
+  color: #222;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.journal-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 90px 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.journal-image {
+  width: 240px;
+  max-width: 290px;
+  height: 240px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.journal-category {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.journal-heading {
+  font-size: 1.1rem;
+  color: #b3392f;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  max-width: 300px;
+}
+
+.journal-excerpt {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.5;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.pagination span {
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+.pagination .active {
+  color: #b3392f;
+  font-weight: bold;
+  border-bottom: 2px solid #b3392f;
+}
+
+.display-header h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #000000 !important;
+}
+
+.display-header p {
+  color: #000000 !important;
+  font-size: 1.7rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+  margin-top: 40px;
+  margin-bottom: 90px;
+  letter-spacing: 1px;
+}
+
+.header-icon-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.paw-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  animation: paw-bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes paw-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ——— ✅ RESPONSIVE ONLY BELOW DESKTOP ——— */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .journal-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  .journal-card {
+    padding: 70px 40px;
+  }
+
+  .journal-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .display-header h2 {
+    text-align: center;
+  }
+
+  .display-header p {
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .journal-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .journal-card {
+    padding: 90px 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .journal-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .journal-heading{
+     font-size:10px;
+  }
+  .journal-excerpt {
+    max-width: 100%;
+    font-size:12px;
+  }
+
+  .header-icon-title {
+    flex-direction: column;
+  }
+
+  .paw-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Extra small */
+@media (max-width: 480px) {
+  .journal-card {
+    padding: 40px 20px;
+    height: 350px !important;
+    width:320px;
+  }
+ .journal-container {
+    padding-top: 19px !important;
+  }
+   .paw-icon {
+    margin-top: 0 !important;
+  }
+
+  .journal-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .journal-title {
+    font-size: 2rem;
+  }
+
+  .display-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .display-header p {
+    font-size: 1rem;
+  }
+}

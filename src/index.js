@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import { WatchlistProvider } from "./context/WatchlistContext";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <BrowserRouter>
+     <CartProvider>  
+      <WatchlistProvider>     {/* ✅ wrap App */}
+        <App />
+        </WatchlistProvider>
+      </CartProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

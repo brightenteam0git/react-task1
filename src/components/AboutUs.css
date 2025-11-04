@@ -1,0 +1,419 @@
+.about-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.about-hero {
+  background: url("../assets/contact-bg.jpg") center/cover no-repeat;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-overlay {
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  width: 100%;
+  height:600px;
+}
+
+.about-overlay h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top:300px;
+}
+
+.about-overlay p {
+  font-size:1.5rem;
+}
+
+.home-link {
+  color: #ffcc00;
+  font-weight: 600;
+}
+.about-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+  max-width: 1400px;
+  gap: 40px;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 58px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Wavy divider line */
+.about-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+
+.wavy-line {
+  width: 2px;
+  height: 220px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 8px,
+    black 8px,
+    black 16px
+  );
+  border-radius: 10px;
+  animation: wave 2s infinite linear;
+}
+
+@keyframes wave {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 16px;
+  }
+}
+
+.about-container {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+/* ----- Pet Parent Section ----- */
+.pet-parent-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;               /* reduced side padding */
+  gap: 40px;                     /* small gap for breathing space */
+  max-width: 1400px;
+  margin: 0 auto; 
+  height:auto;  
+  min-height:960px;             /* centers the section */
+}
+
+.pet-parent-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;     /* move image closer to text */
+}
+
+.pet-parent-img img {
+  width: 690px;
+  height: 690px;
+  border-radius: 50%;
+  object-fit: cover;
+ 
+}
+
+.pet-parent-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 630px;
+  margin-left: 90px;                /* remove any accidental spacing */
+}
+
+.pet-parent-right h2 {
+  font-size: 4.4rem;
+  font-weight: 700;
+  margin-bottom: 95px;
+  line-height: 1.1;
+  max-width:500px;
+}
+
+.pet-parent-right p {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: #333;
+   max-width: 600px;
+
+}
+
+
+
+/* ----- Our Values Section ----- */
+.values-section {
+  background-color: #f6c05c;
+  text-align: center;
+  padding: 90px 50px;
+}
+
+.values-section h2 {
+  font-size: 4.4rem;
+  font-weight: 700;
+  margin-bottom: 79px;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.value-card {
+  max-width: 420px;
+  text-align: center;
+}
+
+.value-card img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 23px;
+}
+
+.value-card h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 19px;
+}
+
+.value-card p {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: #222;
+}
+
+
+
+/* ---------------------- TABLET VIEW ---------------------- */
+@media (max-width: 992px) {
+  /* Hero Section */
+  .about-hero {
+    height: 450px;
+  }
+
+  .about-overlay {
+    height: 450px;
+    padding: 1.5rem;
+  }
+
+  .about-overlay h1 {
+    font-size: 3.5rem;
+    margin-top: 200px;
+  }
+
+  .about-overlay p {
+    font-size: 1.2rem;
+  }
+
+  /* About Rows */
+  .about-row {
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 20px;
+    gap: 30px;
+  }
+
+  .about-row.reverse {
+    flex-direction: column;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 3rem;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+  }
+
+  .about-image img {
+    max-width: 80%;
+  }
+
+  .wavy-line {
+    height: 90px;   /* smaller divider on mobile */
+  }
+
+  
+  /* Pet Parent Section */
+  .pet-parent-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .pet-parent-left {
+    justify-content: center;
+  }
+
+  .pet-parent-img img {
+    width: 420px;
+    height: 420px;
+  }
+
+  .pet-parent-right {
+    margin-left: 0;
+    align-items: center;
+    max-width: 90%;
+  }
+
+  .pet-parent-right h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+
+  .pet-parent-right p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+}
+
+/* ---------------------- MOBILE VIEW ---------------------- */
+@media (max-width: 600px) {
+  /* Hero Section */
+  .about-hero {
+    height: 250px;
+  }
+
+  .about-overlay {
+    height: 250px;
+    padding: 1rem;
+  }
+
+  .about-overlay h1 {
+    font-size: 2rem;
+    margin-top: 90px;
+  }
+
+  .about-overlay p {
+    font-size: 1rem;
+  }
+
+  /* About Rows */
+  .about-row {
+    margin: 20px 10px;
+    gap: 10px;
+  }
+
+  .about-divider{
+    height:100px;
+  }
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 330px;
+  }
+
+   .values-section {
+    padding: 60px 20px;
+  }
+
+  .values-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns for tablets */
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .value-card {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .value-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .value-card h3 {
+    margin-top:15px;
+    font-size: 1.2rem;
+  }
+
+  .value-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Pet Parent Section */
+  .pet-parent-section {
+    padding: 40px 10px;
+    gap: 30px;
+  }
+
+  .pet-parent-img img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .pet-parent-right {
+    align-items: center;
+  }
+
+  .pet-parent-right h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .pet-parent-right p {
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
